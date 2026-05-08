@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log
+.next
+.git
+.gitignore
+.env*.local
+.env*.example
+README.md
+jest.config.js
+jest.setup.js
+src/__tests__
+.eslintrc*
+.turbo
+.vercel
+dist
+coverage

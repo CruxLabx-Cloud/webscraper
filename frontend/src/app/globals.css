@@ -1,38 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
-  --background: 0 0% 100%;
-  --foreground: 240 10% 3.9%;
-  --muted: 240 4.8% 95.9%;
-  --muted-foreground: 240 3.8% 46.1%;
-  --border: 240 5.9% 90%;
-  --primary: 240 5.9% 10%;
-  --primary-foreground: 0 0% 98%;
-  --accent: 240 4.8% 95.9%;
-  --destructive: 0 84.2% 60.2%;
-  --radius: 0.625rem;
+    --background: 204 39% 98%;
+    --foreground: 220 24% 16%;
+    --muted: 210 44% 96%;
+    --muted-foreground: 220 12% 41%;
+    --border: 210 24% 87%;
+    --primary: 207 93% 38%;
+    --primary-foreground: 0 0% 98%;
+    --accent: 203 56% 94%;
+    --destructive: 0 84.2% 60.2%;
+    --radius: 0.85rem;
 }
 
 .dark {
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  --border: 240 3.7% 15.9%;
-  --primary: 0 0% 98%;
-  --primary-foreground: 240 5.9% 10%;
-  --accent: 240 3.7% 15.9%;
-  --destructive: 0 62.8% 30.6%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --border: 240 3.7% 15.9%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --accent: 240 3.7% 15.9%;
+    --destructive: 0 62.8% 30.6%;
 }
 
 * {
-  border-color: hsl(var(--border));
+    border-color: hsl(var(--border));
 }
 
 body {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-  font-feature-settings: "rlig" 1, "calt" 1;
+    background: radial-gradient(circle at 12% -10%, rgba(0, 116, 217, 0.16), transparent 40%), radial-gradient(circle at 88% 2%, rgba(0, 166, 255, 0.14), transparent 32%), linear-gradient(180deg, #f8fcff 0%, #eff5fb 50%, #f5f9fd 100%);
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+    font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+}
+
+main {
+    position: relative;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: linear-gradient(rgba(52, 114, 184, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(52, 114, 184, 0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), transparent 70%);
 }
